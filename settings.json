@@ -1,0 +1,26 @@
+{
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "css.validate": false,
+  "editor.codeActionsOnSave": ["source.fixAll.eslint"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.quickSuggestions": { "strings": true },
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false,
+    "editor.defaultFormatter": "Dart-Code.dart-code",
+    "editor.formatOnPaste": true
+  }
+}
