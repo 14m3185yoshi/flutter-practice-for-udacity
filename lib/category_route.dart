@@ -1,5 +1,7 @@
-import 'package:flutter/material.dart';
+import 'dart:developer';
 
+import 'package:flutter/material.dart';
+import './unit.dart';
 import './category.dart';
 
 final _backgroundColor = Colors.red[100];
@@ -35,6 +37,14 @@ class CategoryRoute extends StatelessWidget {
         itemCount: categories.length);
   }
 
+  List<Unit> _retrieveUnitList(String categoryName) {
+    return List.generate(10, (int i) {
+      i += 1;
+
+      return Unit(name: '$categoryName Unit $i', conversion: i.toDouble());
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final categories = <Category>[];
@@ -43,7 +53,8 @@ class CategoryRoute extends StatelessWidget {
       categories.add(Category(
           name: _categoryNames[i],
           color: _baseColors[i] as ColorSwatch<dynamic>,
-          iconLocation: Icons.cake));
+          iconLocation: Icons.cake,
+          units: _retrieveUnitList(_categoryNames[i])));
     }
 
     final listView = Container(
