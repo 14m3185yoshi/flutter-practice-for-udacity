@@ -28,7 +28,8 @@ class Category extends StatelessWidget {
               title: Text(name, style: Theme.of(context).textTheme.headline4),
               centerTitle: true,
               backgroundColor: color),
-          body: ConverterRoute(color: color, units: units));
+          body: ConverterRoute(color: color, units: units),
+          resizeToAvoidBottomInset: false);
     }));
   }
 
