@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import './category_route.dart';
+// import './category_route.dart'; practice Number1(2022/08/25)
+import './todo_app.dart';
 
 const _categoryName = 'Cake';
 const _categoryIcon = Icons.cake;
@@ -24,10 +25,6 @@ class UnitConverterApp extends StatelessWidget {
             primaryColor: Colors.grey[500],
             textSelectionTheme: TextSelectionThemeData(
                 selectionHandleColor: Colors.green[500])),
-        home: Scaffold(
-            backgroundColor: Colors.green[100],
-            body: const Center(
-              child: CategoryRoute(),
-            )));
+        home: TodoListPage());
   }
 }
