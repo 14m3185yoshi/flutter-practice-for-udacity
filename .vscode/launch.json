@@ -26,6 +26,12 @@
       "request": "launch",
       "type": "dart",
       "deviceId": "00008020-000568541181002E"
+    },
+    {
+      "name": "iosシミュレータ staging",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "83A0EA0B-B5AB-4352-8FE7-790FAA290669"
     }
   ]
 }
