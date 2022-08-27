@@ -1,5 +1,13 @@
+// Provider // 最も基本的なProvider(外部から変更することができない)
+// StateProvider // 外部から変更可能な状態を提供する
+// StateNotifierProvider // 外部から変更可能な状態と、状態操作メソッドクラスを提供する
+// FutureProvider // 非同期で取得した値を提供する
+// StreamProvider // 断続的に最新の値を提供する
+// ChangeNotifierProvider // 変更可能な状態を持つクラスを提供する
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import './provider/state-notifier.dart';
 
 // 値（ここでは "Hello world"）を格納する「プロバイダ」を作成します。
 // プロバイダを使うことで値のモックやオーバーライドが可能になります。
@@ -23,12 +31,8 @@ class MyApp extends ConsumerWidget {
     final String value = ref.watch(helloWorldProvider);
 
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: const Text('Example')),
-        body: Center(
-          child: Text(value),
-        ),
-      ),
-    );
+        title: 'Flutter Demo',
+        theme: ThemeData(primarySwatch: Colors.blue),
+        home: const PracticeStateProvider());
   }
 }
