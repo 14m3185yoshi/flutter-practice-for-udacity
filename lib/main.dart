@@ -7,7 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import './provider/state-notifier.dart';
+import 'package:my_app/provider/state-notifier-provider.dart';
 
 // 値（ここでは "Hello world"）を格納する「プロバイダ」を作成します。
 // プロバイダを使うことで値のモックやオーバーライドが可能になります。
@@ -33,6 +33,6 @@ class MyApp extends ConsumerWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(primarySwatch: Colors.blue),
-        home: const PracticeStateProvider());
+        home: const StateNotifierProviderPage());
   }
 }
