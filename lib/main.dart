@@ -7,18 +7,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:my_app/provider/state-notifier-provider.dart';
-
-// 値（ここでは "Hello world"）を格納する「プロバイダ」を作成します。
-// プロバイダを使うことで値のモックやオーバーライドが可能になります。
-final helloWorldProvider = Provider((_) => 'Hello world');
+import 'package:my_app/animation/lesson1.dart';
 
 void main() {
   runApp(
     // プロバイダをウィジェットで利用するには、アプリ全体を
     // `ProviderScope` ウィジェットで囲む必要があります。
     // ここに各プロバイダのステート（状態）・値が格納されていきます。
-    ProviderScope(
+    const ProviderScope(
       child: MyApp(),
     ),
   );
@@ -26,13 +22,14 @@ void main() {
 
 // StatelessWidget の代わりに Riverpod の ConsumerWidget を継承します。
 class MyApp extends ConsumerWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final String value = ref.watch(helloWorldProvider);
-
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(primarySwatch: Colors.blue),
-        home: const StateNotifierProviderPage());
+        // home: const StateNotifierProviderPage());
+        home: const LogoApp());
   }
 }
